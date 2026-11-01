@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rezeptebuch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --ink: #1d2531;
+  --muted: #5d6673;
+  --line: #dfe3e6;
+  --enamel: #23509f;
+  --enamel-soft: #e1e8f5;
+  --apricot: #f0a356;
+  --apricot-ink: #6b3b0b;
+  --apricot-soft: #fdecd9;
+  --done: #9aa1aa;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161c;
+    --surface: #1a2029;
+    --ink: #e8ebef;
+    --muted: #a2aab5;
+    --line: #2c3440;
+    --enamel: #86a8ec;
+    --enamel-soft: #22314d;
+    --apricot: #f0a356;
+    --apricot-ink: #fde3c4;
+    --apricot-soft: #4a3015;
+    --done: #6a727d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161c; --surface: #1a2029; --ink: #e8ebef; --muted: #a2aab5; --line: #2c3440;
+  --enamel: #86a8ec; --enamel-soft: #22314d; --apricot: #f0a356; --apricot-ink: #fde3c4;
+  --apricot-soft: #4a3015; --done: #6a727d; color-scheme: dark;
+}
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.5 "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--bg);
+}
+h1, h2, .title { font-family: "Young Serif", Georgia, "Times New Roman", serif; font-weight: 400; }
+a { color: var(--enamel); }
+:focus-visible { outline: 2px solid var(--enamel); outline-offset: 2px; }
+.wrap { max-width: 40rem; margin: 0 auto; padding: 0 1.1rem 3rem; }
+
+/* Kopf */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); padding: 1.1rem 0 .6rem;
+}
+.top h1 { font-size: 2.1rem; line-height: 1.1; margin: .3rem 0 .9rem; letter-spacing: -.01em; }
+.top h1 small { font-family: "Instrument Sans", sans-serif; font-size: .95rem; color: var(--muted); margin-left: .4rem; }
+.search {
+  width: 100%; font: inherit; font-size: 1.05rem; color: var(--ink);
+  background: var(--surface); border: 2px solid var(--line); border-radius: 999px;
+  padding: .7rem 1.1rem; appearance: none;
+}
+.search:focus { border-color: var(--enamel); outline: none; }
+.chips { display: flex; gap: .45rem; overflow-x: auto; padding: .75rem 0 .2rem; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex: none; font: inherit; font-size: .9rem; font-weight: 500; color: var(--ink);
+  background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: .35rem .85rem; cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--enamel); border-color: var(--enamel); color: var(--surface); }
+
+/* Liste */
+.list { list-style: none; margin: .4rem 0 0; padding: 0; }
+.list li + li { border-top: 1px solid var(--line); }
+.row { display: flex; gap: .95rem; align-items: center; padding: .85rem 0; text-decoration: none; color: inherit; }
+.thumb {
+  flex: none; width: 4.5rem; height: 4.5rem; border-radius: 50%;
+  border: 4px solid var(--enamel); background: var(--enamel-soft) center/cover no-repeat;
+  display: grid; place-items: center; font-family: "Young Serif", serif; font-size: 1.7rem; color: var(--enamel);
+}
+.row .title { font-size: 1.2rem; line-height: 1.25; margin: 0 0 .2rem; }
+.row .meta { font-size: .88rem; color: var(--muted); }
+.empty { color: var(--muted); padding: 2rem 0; }
+
+/* Detail */
+.back { display: inline-block; padding: 1rem 0 .4rem; font-weight: 600; text-decoration: none; }
+.plate {
+  width: 100%; aspect-ratio: 1 / 1; max-width: 22rem; display: block; margin: .6rem auto 1.2rem;
+  border-radius: 50%; border: 10px solid var(--enamel); object-fit: cover; background: var(--enamel-soft);
+}
+.detail h1 { font-size: 2rem; line-height: 1.15; margin: .4rem 0 .5rem; }
+.lede { color: var(--muted); margin: 0 0 1rem; max-width: 34rem; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin: 0 0 1.4rem; }
+.facts div { background: var(--surface); border-radius: .75rem; padding: .55rem .7rem; }
+.facts dt { font-size: .78rem; color: var(--muted); }
+.facts dd { margin: 0; font-weight: 600; font-size: .95rem; }
+.detail h2 { font-size: 1.35rem; margin: 1.6rem 0 .5rem; }
+.group { font-weight: 600; margin: .9rem 0 .2rem; color: var(--enamel); }
+.ingredients { list-style: none; margin: 0; padding: 0; }
+.ingredients button {
+  display: flex; gap: .7rem; align-items: baseline; width: 100%; text-align: left;
+  font: inherit; color: inherit; background: none; border: 0; padding: .4rem 0; cursor: pointer;
+}
+.ingredients button::before {
+  content: ""; flex: none; width: 1.05rem; height: 1.05rem; border-radius: 50%;
+  border: 2px solid var(--enamel); transform: translateY(.15rem);
+}
+.ingredients button[aria-pressed="true"] { color: var(--done); text-decoration: line-through; }
+.ingredients button[aria-pressed="true"]::before { background: var(--enamel); }
+.steps { margin: 0; padding-left: 1.6rem; }
+.steps li { padding: .35rem 0 .55rem; }
+.steps li::marker { font-family: "Young Serif", serif; color: var(--enamel); }
+.timer {
+  display: inline-block; white-space: nowrap; background: var(--apricot-soft); color: var(--apricot-ink);
+  border-radius: 999px; padding: .05rem .55rem; font-size: .88rem; font-weight: 600; margin-left: .2rem;
+}
+.notes { padding-left: 1.2rem; margin: 0; }
+.notes li { padding: .2rem 0; }
+.hint { margin-top: 2rem; padding: .9rem 1rem; border-radius: .9rem; background: var(--enamel-soft); font-size: .93rem; }
+.source { margin-top: 1rem; font-size: .9rem; color: var(--muted); overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: no-preference) {
+  .detail { animation: rise .22s ease-out; }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section id="liste">
+    <header class="top">
+      <h1>Rezeptebuch <small id="count"></small></h1>
+      <input id="q" class="search" type="search" placeholder="Rezept, Zutat oder Tag suchen" autocomplete="off" aria-label="Rezepte durchsuchen">
+      <div id="chips" class="chips" role="group" aria-label="Kategorie"></div>
+    </header>
+    <ul id="list" class="list"></ul>
+  </section>
+  <article id="detail" class="detail" hidden></article>
+</div>
+<script>
+const REZEPTE = /*__DATA__*/[];
+const KATEGORIEN = { backen: "Backen", hauptgerichte: "Hauptgerichte", beilagen: "Beilagen", suppen: "Suppen", desserts: "Desserts", fruehstueck: "Frühstück" };
+const katName = k => KATEGORIEN[k] || (k ? k[0].toUpperCase() + k.slice(1) : "");
+const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ß/g, "ss");
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+function fmt(s) {
+  let [text, timer] = String(s).split("⏱");
+  let h = esc(text.trim())
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  if (timer) h += ` <span class="timer">⏱ ${esc(timer.trim())}</span>`;
+  return h;
+}
+
+const state = { q: "", kat: "", erledigt: {} };
+const $ = id => document.getElementById(id);
+
+function suchtext(r) {
+  return norm([r.titel, r.beschreibung, katName(r.kategorie), r.tags.join(" "),
+    r.zutaten.flatMap(g => g.items).join(" ")].join(" "));
+}
+REZEPTE.forEach(r => r._s = suchtext(r));
+
+function renderChips() {
+  const kats = [...new Set(REZEPTE.map(r => r.kategorie))].sort((a, b) => katName(a).localeCompare(katName(b), "de"));
+  $("chips").innerHTML = [["", "Alle"], ...kats.map(k => [k, katName(k)])]
+    .map(([k, n]) => `<button class="chip" data-kat="${esc(k)}" aria-pressed="${state.kat === k}">${esc(n)}</button>`).join("");
+}
+
+function renderList() {
+  const terms = norm(state.q).split(/\s+/).filter(Boolean);
+  const treffer = REZEPTE
+    .filter(r => (!state.kat || r.kategorie === state.kat) && terms.every(t => r._s.includes(t)))
+    .sort((a, b) => a.titel.localeCompare(b.titel, "de"));
+  $("count").textContent = REZEPTE.length === 1 ? "1 Rezept" : `${REZEPTE.length} Rezepte`;
+  $("list").innerHTML = treffer.length ? treffer.map(r => {
+    const bild = r.fotos[0] ? ` style="background-image:url('${r.fotos[0]}')"` : "";
+    const meta = [katName(r.kategorie), r.arbeitszeit, ...r.tags.slice(0, 3)].filter(Boolean).map(esc).join(", ");
+    return `<li><a class="row" href="#${esc(r.id)}">
+      <span class="thumb"${bild} aria-hidden="true">${r.fotos[0] ? "" : esc(r.titel[0])}</span>
+      <span><p class="title">${esc(r.titel)}</p><span class="meta">${meta}</span></span></a></li>`;
+  }).join("") : `<li class="empty">Nichts gefunden. Probier einen anderen Begriff oder wähle „Alle“.</li>`;
+}
+
+function renderDetail(r) {
+  const done = state.erledigt[r.id] || (state.erledigt[r.id] = {});
+  const facts = [["Menge", r.menge], ["Arbeitszeit", r.arbeitszeit], ["Koch-/Backzeit", r.koch_backzeit]].filter(f => f[1]);
+  let i = 0;
+  const zutaten = r.zutaten.map(g => `${g.name ? `<p class="group">${esc(g.name)}</p>` : ""}
+    <ul class="ingredients">${g.items.map(it => { const k = i++; return `<li><button data-z="${k}" aria-pressed="${!!done[k]}">${fmt(it)}</button></li>`; }).join("")}</ul>`).join("");
+  $("detail").innerHTML = `
+    <a class="back" href="#">‹ Alle Rezepte</a>
+    ${r.fotos[0] ? `<img class="plate" src="${r.fotos[0]}" alt="${esc(r.titel)}">` : ""}
+    <h1>${esc(r.titel)}</h1>
+    ${r.beschreibung ? `<p class="lede">${fmt(r.beschreibung)}</p>` : ""}
+    ${facts.length ? `<dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : ""}
+    ${zutaten ? `<h2>Zutaten</h2>${zutaten}` : ""}
+    ${r.schritte.length ? `<h2>Zubereitung</h2><ol class="steps">${r.schritte.map(s => `<li>${fmt(s)}</li>`).join("")}</ol>` : ""}
+    ${r.utensilien.length ? `<h2>Utensilien</h2><ul class="notes">${r.utensilien.map(u => `<li>${fmt(u)}</li>`).join("")}</ul>` : ""}
+    ${r.notizen.length ? `<h2>Notizen</h2><ul class="notes">${r.notizen.map(n => `<li>${fmt(n)}</li>`).join("")}</ul>` : ""}
+    <p class="hint">Zum Kochen mit Timern im Claude-Chat schreiben: „${esc(r.titel)}, Kochmodus“.</p>
+    ${r.quelle ? `<p class="source">Quelle: ${/^https?:/.test(r.quelle) ? `<a href="${esc(r.quelle)}" target="_blank" rel="noopener">${esc(new URL(r.quelle).hostname.replace(/^www\./, ""))}</a>` : esc(r.quelle)}</p>` : ""}`;
+}
+
+function route() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  const r = REZEPTE.find(x => x.id === id);
+  $("liste").hidden = !!r;
+  $("detail").hidden = !r;
+  if (r) { renderDetail(r); window.scrollTo(0, 0); document.title = r.titel + " – Rezeptebuch"; }
+  else { renderList(); document.title = "Rezeptebuch"; }
+}
+
+$("q").addEventListener("input", e => { state.q = e.target.value; renderList(); });
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  state.kat = b.dataset.kat; renderChips(); renderList();
+});
+$("detail").addEventListener("click", e => {
+  const b = e.target.closest("[data-z]"); if (!b) return;
+  const id = decodeURIComponent(location.hash.slice(1)), done = state.erledigt[id];
+  done[b.dataset.z] = !done[b.dataset.z];
+  b.setAttribute("aria-pressed", done[b.dataset.z]);
+});
+window.addEventListener("hashchange", route);
+renderChips();
+route();
+</script>
+</body>
+</html>

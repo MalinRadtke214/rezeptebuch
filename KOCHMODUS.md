@@ -34,3 +34,7 @@ Kurz und praktisch – am Herd wird auf dem Handy mitgelesen.
 - Fotos werden im Ordner `bilder/` der jeweiligen Kategorie abgelegt: `rezepte/<kategorie>/bilder/<rezeptname>-1.jpg`, `-2.jpg` usw.
 - Schickt jemand ein Foto im Chat, verkleinert Claude es (lange Kante max. 1600 px, JPEG), legt es dort ab, trägt es unter `fotos:` im Kopfbereich ein, bindet es unter der Überschrift ein und committet.
 - Fotos können auch direkt über GitHub hochgeladen werden; dann den Pfad unter `fotos:` ergänzen.
+
+## Oberfläche aktuell halten
+
+Nach jedem neuen oder geänderten Rezept (inkl. Fotos) `python3 app/build.py` ausführen und `app/rezeptebuch.html` unter der bestehenden Adresse https://claude.ai/artifact/F5yhzNEi14sHFyAf8P1S51 neu veröffentlichen (kein neues Artifact anlegen).

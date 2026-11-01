@@ -16,6 +16,14 @@ Gemeinsame Rezeptsammlung. Jedes Rezept ist eine eigene Markdown-Datei unter `re
 
 Im Claude-Chat „<Rezept>, Kochmodus“ schreiben: Claude zeigt das Rezept als interaktive Oberfläche mit Schritt-für-Schritt-Anleitung und Timern. Details in `KOCHMODUS.md`.
 
+## Oberfläche zum Durchsuchen
+
+Mobile Ansicht mit Suche, Kategorien, Fotos und abhakbaren Zutaten: https://claude.ai/artifact/F5yhzNEi14sHFyAf8P1S51
+
+- Code: `app/template.html` (Oberfläche) und `app/build.py` (liest alle Rezepte ein und erzeugt `app/rezeptebuch.html` mit eingebetteten Daten und Fotos)
+- Neu bauen: `python3 app/build.py` (benötigt Pillow); die erzeugte Datei wird nicht eingecheckt
+- Die Seite ist ein Schnappschuss: Nach neuen oder geänderten Rezepten neu bauen und unter derselben Adresse neu veröffentlichen
+
 ## Kategorien
 
 `backen` · `hauptgerichte` · `beilagen` · `suppen` · `desserts` · `fruehstueck`
