@@ -41,10 +41,6 @@ Rührteigboden mit Zimt und cremiger Quark-Apfel-Füllung, irgendwo zwischen Apf
 - 1 TL Vanillepaste
 - 1 Päckchen Vanillepuddingpulver
 
-### Zum Fertigstellen
-
-- Puderzucker oder Zuckerguss
-
 ## Zubereitung
 
 1. Ofen auf 180 °C Ober-/Unterhitze vorheizen, Springform einfetten.
@@ -55,10 +51,10 @@ Rührteigboden mit Zimt und cremiger Quark-Apfel-Füllung, irgendwo zwischen Apf
 6. Äpfel schälen, Kerngehäuse entfernen, in etwa 1,5 cm große Würfel (Spielwürfel-Größe) schneiden und unter die Creme heben.
 7. Füllung auf den Boden geben und auf mittlerer Schiene backen; bräunt die Oberfläche zu früh, mit Alufolie abdecken. ⏱ 55 min
 8. Vollständig abkühlen lassen und anschließend im Kühlschrank durchziehen lassen. ⏱ 3 h
-9. Vor dem Servieren mit Puderzucker bestäuben oder mit Zuckerguss bestreichen. Kalt servieren.
+9. Kalt servieren, ohne Puderzucker oder Guss.
 
 ## Notizen
 
 - Backzeit laut Quelle 50–60 min – Stäbchenprobe machen.
 - Am besten kalt essen, gern schon am Vortag backen.
-- Zucker gegenüber dem Original reduziert (Boden 100 → 80 g, Füllung 90 → 70 g); Zimt im Teig ergänzt.
+- Zucker gegenüber dem Original reduziert (Boden 100 → 80 g, Füllung 90 → 70 g); Zimt im Teig ergänzt; kein Puderzucker/Guss.
