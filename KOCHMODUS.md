@@ -37,4 +37,4 @@ Kurz und praktisch – am Herd wird auf dem Handy mitgelesen.
 
 ## Oberfläche aktuell halten
 
-Nach jedem neuen oder geänderten Rezept (inkl. Fotos) `python3 app/build.py` ausführen und `app/rezeptebuch.html` unter der bestehenden Adresse https://claude.ai/artifact/F5yhzNEi14sHFyAf8P1S51 neu veröffentlichen (kein neues Artifact anlegen).
+Die Oberfläche läuft auf GitHub Pages (https://malinradtke214.github.io/rezeptebuch/) und wird bei jedem Push nach `rezepte/` oder `app/` automatisch neu gebaut. Es ist nichts manuell zu veröffentlichen. Da das Repo öffentlich ist, vor dem Einchecken von Fotos Metadaten (EXIF/GPS) entfernen.

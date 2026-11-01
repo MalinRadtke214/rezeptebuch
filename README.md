@@ -18,11 +18,12 @@ Im Claude-Chat „<Rezept>, Kochmodus“ schreiben: Claude zeigt das Rezept als 
 
 ## Oberfläche zum Durchsuchen
 
-Mobile Ansicht mit Suche, Kategorien, Fotos und abhakbaren Zutaten: https://claude.ai/artifact/F5yhzNEi14sHFyAf8P1S51
+Im Browser: https://malinradtke214.github.io/rezeptebuch/ (Suche, Kategorien, Fotos, abhakbare Zutaten)
 
-- Code: `app/template.html` (Oberfläche) und `app/build.py` (liest alle Rezepte ein und erzeugt `app/rezeptebuch.html` mit eingebetteten Daten und Fotos)
-- Neu bauen: `python3 app/build.py` (benötigt Pillow); die erzeugte Datei wird nicht eingecheckt
-- Die Seite ist ein Schnappschuss: Nach neuen oder geänderten Rezepten neu bauen und unter derselben Adresse neu veröffentlichen
+- Code: `app/template.html` (Oberfläche) und `app/build.py` (liest alle Rezepte ein und erzeugt eine Seite mit eingebetteten Daten und Fotos)
+- Veröffentlichung: Die GitHub Action `.github/workflows/pages.yml` baut die Seite bei jeder Änderung an `rezepte/` oder `app/` automatisch neu – egal ob über Claude, die GitHub-App oder git
+- Lokal testen: `python3 app/build.py` (benötigt Pillow) erzeugt `app/rezeptebuch.html`; die Datei wird nicht eingecheckt
+- Hinweis: Das Repo ist öffentlich – alles hier, auch Fotos, ist für alle sichtbar
 
 ## Kategorien
 

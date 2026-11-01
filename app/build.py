@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Baut aus rezepte/**/*.md eine eigenständige HTML-Seite (app/rezeptebuch.html).
 
-Aufruf aus dem Repo-Wurzelverzeichnis:  python3 app/build.py
+Aufruf aus dem Repo-Wurzelverzeichnis:  python3 app/build.py [Zieldatei]
+(ohne Zieldatei: app/rezeptebuch.html; GitHub Pages baut nach _site/index.html)
 Benötigt: Pillow (für das Verkleinern der Fotos).
 """
 import base64, io, json, re, sys
@@ -95,8 +96,10 @@ def main():
         rezepte.append(r)
     data = json.dumps(rezepte, ensure_ascii=False).replace("</", "<\\/")
     html = TEMPLATE.read_text(encoding="utf-8").replace("/*__DATA__*/[]", data)
-    OUT.write_text(html, encoding="utf-8")
-    print(f"{len(rezepte)} Rezepte -> {OUT.relative_to(ROOT)} ({OUT.stat().st_size // 1024} KB)")
+    out = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else OUT
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(html, encoding="utf-8")
+    print(f"{len(rezepte)} Rezepte -> {out} ({out.stat().st_size // 1024} KB)")
 
 
 if __name__ == "__main__":
