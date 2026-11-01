@@ -6,11 +6,13 @@ arbeitszeit: 30 min
 koch_backzeit: 50–60 min
 tags: [vegetarisch, kuchen, herbst, kalt, vortag]
 quelle: https://www.einfachmalene.de/cremiger-quark-apfelkuchen-einfach-mega-lecker/
-fotos: []
+fotos: [bilder/apfelkuchen-mit-quark-1.jpg]
 hinzugefuegt_von: Malin
 ---
 
 # Apfelkuchen mit Quark
+
+![Apfelkuchen mit Quark](bilder/apfelkuchen-mit-quark-1.jpg)
 
 Rührteigboden mit Zimt und cremiger Quark-Apfel-Füllung, irgendwo zwischen Apfel- und Käsekuchen. Schmeckt am besten kalt.
 
