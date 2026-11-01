@@ -11,6 +11,10 @@ Gemeinsame Rezeptsammlung. Jedes Rezept ist eine eigene Markdown-Datei unter `re
 - **Zubereitung:** nummerierte Schritte; Wartezeiten als `⏱ <Dauer>` am Ende des Schritts markieren (z. B. `⏱ 55 min`) – daraus werden beim Kochen Timer
 - **Notizen:** eigene Erfahrungen und Änderungen unter `## Notizen`, gern mit Datum
 
+## Kochmodus
+
+Im Claude-Chat „<Rezept>, Kochmodus“ schreiben: Claude zeigt das Rezept als interaktive Oberfläche mit Schritt-für-Schritt-Anleitung und Timern. Details in `KOCHMODUS.md`.
+
 ## Kategorien
 
 `backen` · `hauptgerichte` · `beilagen` · `suppen` · `desserts` · `fruehstueck`
