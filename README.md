@@ -1,4 +1,4 @@
-# Unser Kochbuch
+# Unser Rezeptebuch
 
 Gemeinsame Rezeptsammlung. Jedes Rezept ist eine eigene Markdown-Datei unter `rezepte/<kategorie>/`.
 
