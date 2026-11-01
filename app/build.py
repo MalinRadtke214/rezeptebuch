@@ -2,7 +2,7 @@
 """Baut aus rezepte/**/*.md eine eigenständige HTML-Seite (app/rezeptebuch.html).
 
 Aufruf aus dem Repo-Wurzelverzeichnis:  python3 app/build.py [Zieldatei]
-(ohne Zieldatei: app/rezeptebuch.html; GitHub Pages baut nach _site/index.html)
+(ohne Zieldatei: index.html im Repo-Root, die GitHub Pages ausliefert)
 Benötigt: Pillow (für das Verkleinern der Fotos).
 """
 import base64, io, json, re, sys
@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REZEPTE = ROOT / "rezepte"
 TEMPLATE = ROOT / "app" / "template.html"
-OUT = ROOT / "app" / "rezeptebuch.html"
+OUT = ROOT / "index.html"  # wird von GitHub Pages (Branch main, Root) ausgeliefert
 FOTO_MAX = 900  # lange Kante in px für die eingebetteten Fotos
 
 
