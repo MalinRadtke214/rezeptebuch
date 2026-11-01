@@ -37,4 +37,4 @@ Kurz und praktisch – am Herd wird auf dem Handy mitgelesen.
 
 ## Oberfläche aktuell halten
 
-Die Oberfläche läuft auf GitHub Pages (https://malinradtke214.github.io/rezeptebuch/) direkt aus `index.html` im Repo-Root (Branch `main`). Bei jedem neuen oder geänderten Rezept bzw. Foto `python3 app/build.py` ausführen und die neu erzeugte `index.html` im selben Commit mit pushen. Da das Repo öffentlich ist, vor dem Einchecken von Fotos Metadaten (EXIF/GPS) entfernen.
+Die Oberfläche läuft auf GitHub Pages (https://malinradtke214.github.io/rezeptebuch/) direkt aus `docs/index.html` (Branch `main`, Ordner `/docs`). Bei jedem neuen oder geänderten Rezept bzw. Foto `python3 app/build.py` ausführen und die neu erzeugte `docs/index.html` im selben Commit mit pushen. Da das Repo öffentlich ist, vor dem Einchecken von Fotos Metadaten (EXIF/GPS) entfernen.

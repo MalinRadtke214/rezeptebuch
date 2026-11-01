@@ -20,9 +20,9 @@ Im Claude-Chat „<Rezept>, Kochmodus“ schreiben: Claude zeigt das Rezept als 
 
 Im Browser: https://malinradtke214.github.io/rezeptebuch/ (Suche, Kategorien, Fotos, abhakbare Zutaten)
 
-- Code: `app/template.html` (Oberfläche) und `app/build.py` (liest alle Rezepte ein und erzeugt `index.html` im Repo-Root mit eingebetteten Daten und Fotos)
-- GitHub Pages liefert `index.html` direkt vom Branch `main` (Root) aus
-- **Nach jeder Änderung an Rezepten oder Fotos:** `python3 app/build.py` ausführen (benötigt Pillow) und `index.html` mit einchecken – sonst zeigt die Seite den alten Stand
+- Code: `app/template.html` (Oberfläche) und `app/build.py` (liest alle Rezepte ein und erzeugt `docs/index.html` mit eingebetteten Daten und Fotos)
+- GitHub Pages liefert `docs/index.html` direkt vom Branch `main` (Ordner `/docs`) aus
+- **Nach jeder Änderung an Rezepten oder Fotos:** `python3 app/build.py` ausführen (benötigt Pillow) und `docs/index.html` mit einchecken – sonst zeigt die Seite den alten Stand
 - Hinweis: Das Repo ist öffentlich – alles hier, auch Fotos, ist für alle sichtbar
 
 ## Kategorien
