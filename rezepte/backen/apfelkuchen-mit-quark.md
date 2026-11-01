@@ -6,6 +6,7 @@ arbeitszeit: 30 min
 koch_backzeit: 50–60 min
 tags: [vegetarisch, kuchen, herbst, kalt, vortag]
 quelle: https://www.einfachmalene.de/cremiger-quark-apfelkuchen-einfach-mega-lecker/
+fotos: []
 hinzugefuegt_von: Malin
 ---
 

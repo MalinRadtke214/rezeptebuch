@@ -9,6 +9,7 @@ Gemeinsame Rezeptsammlung. Jedes Rezept ist eine eigene Markdown-Datei unter `re
 - **Kopfbereich (YAML):** Titel, Kategorie, Menge, Zeiten, Tags, Quelle
 - **Zutaten:** eine Zeile pro Zutat, `- <Menge> <Einheit> <Zutat>`; bei mehreren Komponenten Unterüberschriften (`### Teig`, `### Füllung`)
 - **Zubereitung:** nummerierte Schritte; Wartezeiten als `⏱ <Dauer>` am Ende des Schritts markieren (z. B. `⏱ 55 min`) – daraus werden beim Kochen Timer
+- **Fotos:** nur eigene Fotos, abgelegt unter `rezepte/<kategorie>/bilder/<rezeptname>-1.jpg` und im Kopfbereich unter `fotos:` eingetragen
 - **Notizen:** eigene Erfahrungen und Änderungen unter `## Notizen`, gern mit Datum
 
 ## Kochmodus
