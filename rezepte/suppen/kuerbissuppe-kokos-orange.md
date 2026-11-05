@@ -18,7 +18,6 @@ Cremige Hokkaido-Suppe mit Karotten, Ingwer und Curry, abgerundet mit Kokosmilch
 
 - großer Topf mit Deckel
 - Pürierstab
-- Reibe
 
 ## Zutaten
 
@@ -27,7 +26,6 @@ Cremige Hokkaido-Suppe mit Karotten, Ingwer und Curry, abgerundet mit Kokosmilch
 - 1 Zwiebel
 - 2 Knoblauchzehen
 - 1 Stück Ingwer (etwa daumengroß)
-- 1/2 TL abgeriebene Orangenschale (nur von einer unbehandelten Orange)
 - 1 EL Öl
 - 1 TL Currypulver
 - 400 ml Kokosmilch
@@ -40,7 +38,7 @@ Cremige Hokkaido-Suppe mit Karotten, Ingwer und Curry, abgerundet mit Kokosmilch
 
 1. Hokkaido waschen, entkernen und mit Schale würfeln. Karotten schälen und in dünne Scheiben schneiden. Zwiebel, Knoblauch und Ingwer fein hacken.
 2. Zwiebel im Öl glasig dünsten. ⏱ 3 min
-3. Knoblauch, Ingwer, Orangenschale und Curry zugeben und kurz mitrösten. ⏱ 1 min
+3. Knoblauch, Ingwer und Curry zugeben und kurz mitrösten. ⏱ 1 min
 4. Kürbis und Karotten dazugeben, mit Brühe und Kokosmilch aufgießen und zugedeckt köcheln lassen, bis alles weich ist. ⏱ 20 min
 5. Fein pürieren; ist die Suppe zu dick, etwas Brühe oder Wasser nachgießen.
 6. Orangensaft einrühren und mit Salz, Pfeffer und nach Belieben Limettensaft abschmecken.
@@ -49,5 +47,4 @@ Cremige Hokkaido-Suppe mit Karotten, Ingwer und Curry, abgerundet mit Kokosmilch
 
 - Lässt sich gut am Vortag kochen: zügig abkühlen lassen (flache Schüssel oder kaltes Wasserbad), spätestens nach 2 Stunden in den Kühlschrank und vor dem Servieren einmal richtig aufkochen. Hält gekühlt bis zu 3 Tage.
 - Beim Vorkochen den Orangensaft erst beim Aufwärmen einrühren – durch langes Kochen verliert er sein Aroma.
-- Orangenschale sparsam dosieren, sonst wird die Suppe bitter.
 - Bei Butternut statt Hokkaido die Schale vorher abschälen.
