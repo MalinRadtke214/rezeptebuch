@@ -24,7 +24,8 @@ Würzig-fruchtige Kichererbsen in Tomatensoße mit Gemüse, Joghurt und geröste
 ### Kichererbsen
 
 - 380 g Kichererbsen (abgetropft aus der Dose/dem Glas)
-- 200 g Gemüse-Mix aus Karotte, Kohl und Spinat, vorgeschnitten
+- 2 Karotten (ca. 150 g)
+- 100 g TK-Blattspinat
 - 2 g Gewürzmischung „Hello Mezze“ und 4 g „Hello Harissa“ (aus der Box) – oder die Ersatz-Gewürzmischung unten
 - 4 g Gemüsebrühpulver
 - 390 g stückige Tomaten
@@ -58,14 +59,15 @@ Würzig-fruchtige Kichererbsen in Tomatensoße mit Gemüse, Joghurt und geröste
 ## Zubereitung
 
 1. Kichererbsen in einem Sieb abtropfen lassen.
-2. In der Pfanne mit Deckel Olivenöl und Butter erhitzen, Kichererbsen darin anbraten. ⏱ 2 min
-3. Gemüse-Mix, Gewürzmischungen (bzw. die Ersatz-Mischung) und Brühpulver zugeben und kurz mitbraten. ⏱ 3 min
-4. Tomaten, Aprikosenchutney und Wasser einrühren, Deckel auflegen und leise köcheln lassen, bis alles andere fertig ist.
+2. Karotten schälen und in feine Streifen schneiden oder grob raspeln. In der Pfanne mit Deckel Olivenöl und Butter erhitzen, Kichererbsen darin anbraten. ⏱ 2 min
+3. Karotten, Gewürzmischungen (bzw. die Ersatz-Mischung) und Brühpulver zugeben und kurz mitbraten. ⏱ 3 min
+4. Tomaten, Aprikosenchutney, Wasser und den gefrorenen Spinat einrühren, Deckel auflegen und leise köcheln lassen, bis alles andere fertig ist.
 5. Fladenbrot in 6 Scheiben schneiden. In der zweiten Pfanne Olivenöl erhitzen und die Scheiben von jeder Seite goldbraun rösten. ⏱ 2 min pro Seite
 6. Fladenbrot herausnehmen, leicht salzen. Beim Wenden bei Bedarf etwas Öl nachgeben. In der Zwischenzeit die Petersilie hacken.
 7. Kichererbsen mit Salz und Pfeffer abschmecken und in tiefen Tellern anrichten. Mit Joghurt, Petersilie und nach Belieben einem Schuss Olivenöl garnieren. Fladenbrot schräg halbieren und dazu servieren.
 
 ## Notizen
 
+- Statt des Gemüse-Mix aus der Box (Karotte, Kohl, Spinat) nehmen wir Karotten und TK-Spinat; der Spinat taut in der Soße auf.
 - Mengen für 2 Portionen; für 3 bzw. 4 Portionen Öl, Butter und Wasser laut Quelle auf das 1,5- bzw. 2-Fache erhöhen.
 - Die Gewürzmischungen stammen aus der HelloFresh-Box; ohne Box die Ersatz-Gewürzmischung nehmen (ohne Harissapaste). Chili zunächst sparsam dosieren und am Ende nachwürzen.
